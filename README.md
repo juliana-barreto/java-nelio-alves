@@ -3,7 +3,7 @@
  
  ## 📋 Estrutura do Curso
 | Seção | Tópicos |
-|:---|:---|
+|:---:|:---:|
 | 1 | Introdução |
 | 2 | Conceitos de programação |
 | 3 | Introdução à linguagem Java |

@@ -1,7 +1,7 @@
 package io.github.juliana_barreto.entities;
 
 public class Student {
-  private final String name;
+
   private final double[] scores;
 
   public Student(String name, double[] scores) {
@@ -21,5 +21,19 @@ public class Student {
       sum += scores[i];
     }
     return sum;
+  }
+
+  public double average() {
+    return finalGrade() / scores.length;
+  }
+
+  public String getName() {
+    return name;
+  }
+
+  private final String name;
+
+  public double[] getScores() {
+    return scores;
   }
 }

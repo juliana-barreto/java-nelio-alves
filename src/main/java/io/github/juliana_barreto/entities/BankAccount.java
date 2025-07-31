@@ -7,6 +7,22 @@ public class BankAccount {
   private double balance;
   private static final double WITHDRAWAL_FEE = 5.0;
 
+  public BankAccount(int accountNumber, String accountHolder, double initialDeposit) {
+    if (initialDeposit < 0) {
+      throw new IllegalArgumentException("Initial deposit cannot be negative.");
+    }
+    if (accountHolder == null || accountHolder.trim().isEmpty()) {
+      throw new IllegalArgumentException("Account holder name cannot be null or empty.");
+    }
+    this.accountNumber = accountNumber;
+    this.accountHolder = accountHolder;
+    this.balance = initialDeposit;
+  }
+
+  public BankAccount(int accountNumber, String accountHolder) {
+    this(accountNumber, accountHolder, 0.0);
+  }
+
   public String getAccountHolder() {
     return accountHolder;
   }
@@ -21,21 +37,6 @@ public class BankAccount {
 
   public double getBalance() {
     return balance;
-  }
-
-  public BankAccount(int accountNumber, String accountHolder) {
-    this.accountNumber = accountNumber;
-    this.accountHolder = accountHolder;
-    this.balance = 0.0;
-  }
-
-  public BankAccount(int accountNumber, String accountHolder, double amount) {
-    if (amount < 0) {
-      throw new IllegalArgumentException("Initial deposit cannot be negative.");
-    }
-    this.accountNumber = accountNumber;
-    this.accountHolder = accountHolder;
-    deposit(amount);
   }
 
   public String toString() {

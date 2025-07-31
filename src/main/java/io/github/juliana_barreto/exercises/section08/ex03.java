@@ -6,16 +6,16 @@ import java.util.Locale;
 
 public class ex03 {
 
-  private static final int QUANTITY = 3;
+  private static final int SCORES_COUNT = 3;
 
   public static void main(String[] args) {
-    double[] scores = new double[QUANTITY];
+    double[] scores = new double[SCORES_COUNT];
     Scanner scanner = new Scanner(System.in);
     scanner.useLocale(Locale.US);
 
     System.out.print("Student's name: ");
     String name = scanner.nextLine();
-    for (int i = 0; i < QUANTITY; i++) {
+    for (int i = 0; i < SCORES_COUNT; i++) {
       System.out.printf("Score #%d: ", i + 1);
       scores[i] = scanner.nextDouble();
     }

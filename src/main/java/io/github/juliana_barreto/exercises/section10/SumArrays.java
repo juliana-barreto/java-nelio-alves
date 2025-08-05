@@ -3,7 +3,7 @@ package io.github.juliana_barreto.exercises.section10;
 import io.github.juliana_barreto.utils.ArrayUtils;
 import java.util.Scanner;
 
-public class VectorSum {
+public class SumArrays {
 
   public static void main(String[] args) {
     Scanner scanner = new Scanner(System.in);

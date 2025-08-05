@@ -5,7 +5,7 @@ import io.github.juliana_barreto.utils.ArrayUtils;
 import java.util.Locale;
 import java.util.Scanner;
 
-public class ex09 {
+public class ApprovedStudents {
 
   private static final int SCORES_COUNT = 2;
   private static final double PASSING_GRADE = 6.0;

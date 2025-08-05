@@ -4,7 +4,7 @@ import io.github.juliana_barreto.entities.Person;
 import java.util.Scanner;
 import java.util.Locale;
 
-public class ex03 {
+public class PeopleStats {
 
   private static double averageHeight(Person[] people) {
     int n = people.length;

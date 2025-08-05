@@ -4,7 +4,7 @@ import io.github.juliana_barreto.utils.ArrayUtils;
 import java.util.Scanner;
 import java.util.Locale;
 
-public class ex07 {
+public class BelowAverageValues {
 
   public static void main(String[] args) {
     Scanner scanner = new Scanner(System.in).useLocale(Locale.US);

@@ -4,7 +4,7 @@ import io.github.juliana_barreto.entities.BankAccount;
 import java.util.Scanner;
 import java.util.Locale;
 
-public class ex01 {
+public class AccountOperations {
   public static void main (String[] args) {
     Scanner scanner = new Scanner(System.in);
     scanner.useLocale(Locale.US);

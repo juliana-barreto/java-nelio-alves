@@ -4,7 +4,7 @@ import io.github.juliana_barreto.entities.Employee;
 import java.util.Scanner;
 import java.util.Locale;
 
-public class ex02 {
+public class SalaryIncrease {
 
   public static void main(String[] args) {
     Scanner scanner = new Scanner(System.in);

@@ -4,7 +4,7 @@ import io.github.juliana_barreto.entities.Student;
 import java.util.Scanner;
 import java.util.Locale;
 
-public class ex03 {
+public class StudentApproval {
 
   private static final int SCORES_COUNT = 3;
 

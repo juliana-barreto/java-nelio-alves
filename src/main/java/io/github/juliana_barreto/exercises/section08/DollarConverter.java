@@ -4,7 +4,7 @@ import io.github.juliana_barreto.utils.CurrencyConverter;
 import java.util.Scanner;
 import java.util.Locale;
 
-public class ex04 {
+public class DollarConverter {
 
   public static void main(String[] args) {
     Locale.setDefault(Locale.US);

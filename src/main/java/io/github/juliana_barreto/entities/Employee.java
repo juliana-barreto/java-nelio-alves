@@ -7,7 +7,7 @@ public class Employee {
   private final double tax;
 
   public Employee(String name, double grossSalary, double tax) {
-    if (name == null || name.isBlank()) {
+    if (name == null || name.trim().isBlank()) {
       throw new IllegalArgumentException("Name cannot be blank.");
     }
     if (grossSalary <= 0) {

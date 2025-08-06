@@ -8,7 +8,7 @@ public class Person {
   private final char gender;
 
   public Person(String name, int age, double height, char gender) {
-    if (name == null || name.isEmpty()) {
+    if (name == null || name.trim().isEmpty()) {
       throw new IllegalArgumentException("Name cannot be null or empty.");
     }
     if (age < 0) {

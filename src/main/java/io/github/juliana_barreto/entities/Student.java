@@ -5,7 +5,7 @@ public class Student {
   private final double[] scores;
 
   public Student(String name, double[] scores) {
-    if (name == null || name.isBlank()) {
+    if (name == null || name.trim().isBlank()) {
       throw new IllegalArgumentException("Name cannot be blank");
     }
     if (scores == null || scores.length == 0) {

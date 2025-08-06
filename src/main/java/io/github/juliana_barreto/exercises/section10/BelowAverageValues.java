@@ -18,9 +18,9 @@ public class BelowAverageValues {
     System.out.printf("\nAVERAGE: %.3f\n", average);
 
     System.out.print("VALUES BELOW AVERAGE: ");
-    for (int i = 0; i < n; i++) {
-      if (numbers[i] < average) {
-        System.out.printf("%.1f ", numbers[i]);
+    for (double number : numbers) {
+      if (number < average) {
+        System.out.printf("%.1f ", number);
       }
     }
   }

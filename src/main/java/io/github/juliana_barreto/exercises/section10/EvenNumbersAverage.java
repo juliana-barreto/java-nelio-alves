@@ -14,8 +14,8 @@ public class EvenNumbersAverage {
     scanner.close();
 
     int evenCount = 0;
-    for (int i = 0; i < n; i++) {
-      if (numbers[i] % 2 == 0) {
+    for (int number : numbers) {
+      if (number % 2 == 0) {
         evenCount++;
       }
     }
@@ -25,9 +25,9 @@ public class EvenNumbersAverage {
     } else {
       int[] evenNumbers = new int[evenCount];
       int j = 0;
-      for (int i = 0; i < n; i++) {
-        if (numbers[i] % 2 == 0) {
-          evenNumbers[j++] = numbers[i];
+      for (int number : numbers) {
+        if (number % 2 == 0) {
+          evenNumbers[j++] = number;
         }
       }
       System.out.printf("EVEN NUMBERS AVERAGE = %.1f\n", ArrayUtils.average(evenNumbers));

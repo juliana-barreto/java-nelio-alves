@@ -16,7 +16,7 @@ public class ApprovedStudents {
     System.out.print("Enter the number of students: ");
     int n = scanner.nextInt();
     scanner.nextLine();
-    Student[] student = new Student[n];
+    Student[] students = new Student[n];
 
     for (int i = 0; i < n; i++) {
       System.out.printf("\nStudent #%d:%n", i + 1);
@@ -24,14 +24,14 @@ public class ApprovedStudents {
       String name = scanner.nextLine();
       double[] scores = ArrayUtils.readDouble(scanner, SCORES_COUNT, "Score");
       scanner.nextLine();
-      student[i] = new Student(name, scores);
+      students[i] = new Student(name, scores);
     }
     scanner.close();
 
     System.out.println("\nApproved students: ");
-    for (int i = 0; i < n; i++) {
-      if (student[i].average() >= PASSING_GRADE) {
-        System.out.println(student[i].getName());
+    for (Student student : students) {
+      if (student.average() >= PASSING_GRADE) {
+        System.out.println(student.getName());
       }
     }
   }

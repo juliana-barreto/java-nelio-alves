@@ -25,23 +25,23 @@ public class HeightAndGenderStats {
     scanner.close();
 
     double minHeight = people[0].getHeight(), maxHeight = people[0].getHeight();
-    for (int i = 1; i < n; i++) {
-      if (people[i].getHeight() < minHeight) {
-        minHeight = people[i].getHeight();
+    for (Person person : people) {
+      if (person.getHeight() < minHeight) {
+        minHeight = person.getHeight();
       }
-      if (people[i].getHeight() > maxHeight) {
-        maxHeight = people[i].getHeight();
+      if (person.getHeight() > maxHeight) {
+        maxHeight = person.getHeight();
       }
     }
 
     int maleCount = 0, femaleCount = 0;
     double femaleHeightSum = 0.0;
-    for (int i = 0; i < n; i++) {
-      if (people[i].getGender() == 'M') {
+    for (Person person : people) {
+      if (person.getGender() == 'M') {
         maleCount++;
       } else {
         femaleCount++;
-        femaleHeightSum += people[i].getHeight();
+        femaleHeightSum += person.getHeight();
       }
     }
 

@@ -17,8 +17,8 @@ public class Student {
 
   public double finalGrade() {
     double sum = 0;
-    for (int i = 0; i < scores.length; i++) {
-      sum += scores[i];
+    for (double score : scores) {
+      sum += score;
     }
     return sum;
   }

@@ -14,9 +14,9 @@ public class NegativeNumberFinder {
     scanner.close();
 
     System.out.println("\nNEGATIVE NUMBERS:");
-    for (int i = 0; i < n; i++) {
-      if (numbers[i] < 0) {
-        System.out.println(numbers[i]);
+    for (int number : numbers) {
+      if (number < 0) {
+        System.out.println(number);
       }
     }
   }

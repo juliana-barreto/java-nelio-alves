@@ -2,8 +2,8 @@ package io.github.juliana_barreto.entities;
 
 public class Renter {
 
-  private String final name;
-  private String final email;
+  private final String name;
+  private final String email;
 
   public Renter(String name, String email) {
     if (name == null || name.trim().isEmpty()) {

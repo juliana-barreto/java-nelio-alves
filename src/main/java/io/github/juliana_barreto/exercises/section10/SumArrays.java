@@ -19,8 +19,8 @@ public class SumArrays {
 
     System.out.println("\nRESULTING ARRAY: ");
     int[] result = ArrayUtils.add(a, b);
-    for (int i = 0; i < n; i++) {
-      System.out.printf("%d ", result[i]);
+    for (int value : result) {
+      System.out.printf("%d ", value);
     }
   }
 }

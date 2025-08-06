@@ -15,9 +15,9 @@ public class EvenNumberFinder {
 
     int evenCount = 0;
     System.out.println("\nEVEN NUMBERS: ");
-    for (int i = 0; i < n; i++) {
-      if (numbers[i] % 2 == 0) {
-        System.out.print(numbers[i] + "  ");
+    for (int number : numbers) {
+      if (number % 2 == 0) {
+        System.out.print(number + "  ");
         evenCount++;
       }
     }

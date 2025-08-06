@@ -9,8 +9,8 @@ public class PeopleStats {
   private static double averageHeight(Person[] people) {
     int n = people.length;
     double heightSum = 0.0;
-    for (int i = 0; i < n; i++) {
-      heightSum += people[i].getHeight();
+    for (Person person : people) {
+      heightSum += person.getHeight();
     }
     return heightSum / people.length;
   }

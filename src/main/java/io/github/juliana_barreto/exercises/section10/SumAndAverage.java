@@ -14,8 +14,8 @@ public class SumAndAverage {
     scanner.close();
 
     System.out.print("\nVALUES = ");
-    for (int i = 0; i < n; i++) {
-      System.out.printf("%.2f ", numbers[i]);
+    for (double number : numbers) {
+      System.out.printf("%.2f ", number);
     }
 
     System.out.printf("\nSUM = %.2f\n", ArrayUtils.sum(numbers));

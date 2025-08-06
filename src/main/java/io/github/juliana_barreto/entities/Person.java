@@ -3,22 +3,22 @@ package io.github.juliana_barreto.entities;
 public class Person {
 
   private final String name;
-  private final int age;
-  private final double height;
-  private final char gender;
+  private final Integer age;
+  private final Double height;
+  private final Character gender;
 
-  public Person(String name, int age, double height, char gender) {
-    if (name == null || name.trim().isEmpty()) {
-      throw new IllegalArgumentException("Name cannot be null or empty.");
+  public Person(String name, Integer age, Double height, Character gender) {
+    if (name != null && name.trim().isEmpty()) {
+      throw new IllegalArgumentException("Name cannot be empty.");
     }
-    if (age < 0) {
+    if (age != null && age < 0) {
       throw new IllegalArgumentException("Age cannot be negative.");
     }
-    if (height < 0) {
+    if (height != null && height < 0) {
       throw new IllegalArgumentException("Height cannot be negative.");
     }
-    if (gender != 'F' && gender != 'M' && gender != 'X') {
-      throw new IllegalArgumentException("Gender must be 'F' or 'M' or 'X' for unspecified.");
+    if (gender != null && gender != 'F' && gender != 'M') {
+      throw new IllegalArgumentException("Gender must be 'F' or 'M'.");
     }
     this.name = name;
     this.age = age;
@@ -27,11 +27,11 @@ public class Person {
   }
 
   public Person(String name, int age, double height) {
-    this(name, age, height, 'X');
+    this(name, age, height, null);
   }
 
   public Person(double height, char gender) {
-    this("N/A", 0, height, gender);
+    this(null, null, height, gender);
   }
 
   public String getName() {

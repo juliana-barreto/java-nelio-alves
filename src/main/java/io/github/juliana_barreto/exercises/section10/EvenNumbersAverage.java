@@ -13,24 +13,19 @@ public class EvenNumbersAverage {
     int[] numbers = ArrayUtils.readInt(scanner, n, "Number");
     scanner.close();
 
-    int evenCount = 0;
+    int evenCount = 0, evenSum = 0;
     for (int number : numbers) {
       if (number % 2 == 0) {
         evenCount++;
+        evenSum += number;
       }
     }
 
     if (evenCount == 0) {
       System.out.println("NO EVEN NUMBERS");
     } else {
-      int[] evenNumbers = new int[evenCount];
-      int j = 0;
-      for (int number : numbers) {
-        if (number % 2 == 0) {
-          evenNumbers[j++] = number;
-        }
-      }
-      System.out.printf("EVEN NUMBERS AVERAGE = %.1f\n", ArrayUtils.average(evenNumbers));
+      double average = (double) evenSum / evenCount;
+      System.out.printf("EVEN NUMBERS AVERAGE = %.1f\n", average);
     }
   }
 }

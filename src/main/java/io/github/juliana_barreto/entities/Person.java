@@ -38,15 +38,15 @@ public class Person {
     return name;
   }
 
-  public int getAge() {
+  public Integer getAge() {
     return age;
   }
 
-  public double getHeight() {
+  public Double getHeight() {
     return height;
   }
 
-  public char getGender() {
+  public Character getGender() {
     return gender;
   }
 }

@@ -46,8 +46,7 @@ public class Person {
     return height;
   }
 
-  public Character
-  getGender() {
+  public Character getGender() {
     return gender;
   }
 }

@@ -5,7 +5,8 @@ import java.util.Scanner;
 import java.util.Locale;
 
 public class AccountOperations {
-  public static void main (String[] args) {
+
+  public static void main(String[] args) {
     Scanner scanner = new Scanner(System.in);
     scanner.useLocale(Locale.US);
 
@@ -15,14 +16,11 @@ public class AccountOperations {
     System.out.print("Enter account holder: ");
     String accountHolder = scanner.nextLine();
     System.out.print("Is there an initial deposit (y/n)? ");
-    char answer;
-    do {
+    char answer = scanner.next().toLowerCase().charAt(0);
+    while (answer != 'y' && answer != 'n') {
+      System.out.print("Invalid option. Please enter 'y' or 'n': ");
       answer = scanner.next().toLowerCase().charAt(0);
-      if (answer != 'y' && answer != 'n') {
-        System.out.print("Invalid option. Please enter 'y' or 'n': ");
-      }
-    } while (answer != 'y' && answer != 'n');
-
+    }
     double amount;
     BankAccount account;
     if (answer == 'y') {

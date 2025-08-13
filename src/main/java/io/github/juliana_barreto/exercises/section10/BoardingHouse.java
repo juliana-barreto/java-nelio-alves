@@ -10,14 +10,13 @@ public class BoardingHouse {
   public static void main(String[] args) {
     Scanner scanner = new Scanner(System.in);
 
-    int n;
-    do {
+    System.out.print("How many rooms will be rented? ");
+    int n = scanner.nextInt();
+    while (n < 1 || n > MAX_ROOMS) {
+      System.out.printf("Invalid. There's a maximum of %d rooms.%n", MAX_ROOMS);
       System.out.print("How many rooms will be rented? ");
       n = scanner.nextInt();
-      if (n < 1 || n > MAX_ROOMS) {
-        System.out.printf("Invalid. There's a maximum of %d rooms.%n", MAX_ROOMS);
-      }
-    } while (n < 1 || n > MAX_ROOMS);
+    }
     Renter[] rooms = new Renter[MAX_ROOMS];
 
     for (int i = 0; i < n; i++) {

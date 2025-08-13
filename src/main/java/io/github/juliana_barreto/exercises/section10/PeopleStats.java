@@ -43,7 +43,6 @@ public class PeopleStats {
   }
 
   private static double averageHeight(Person[] people) {
-    int n = people.length;
     double heightSum = 0.0;
     for (Person person : people) {
       heightSum += person.getHeight();

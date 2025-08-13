@@ -7,7 +7,6 @@ import java.util.Locale;
 public class HeightAndGenderStats {
 
   public static void main(String[] args) {
-
     Scanner scanner = new Scanner(System.in).useLocale(Locale.US);
 
     System.out.print("Enter the number of people: ");

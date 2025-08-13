@@ -6,15 +6,6 @@ import java.util.Locale;
 
 public class PeopleStats {
 
-  private static double averageHeight(Person[] people) {
-    int n = people.length;
-    double heightSum = 0.0;
-    for (Person person : people) {
-      heightSum += person.getHeight();
-    }
-    return heightSum / people.length;
-  }
-
   public static void main(String[] args) {
     Scanner scanner = new Scanner(System.in);
     scanner.useLocale(Locale.US);
@@ -49,5 +40,14 @@ public class PeopleStats {
     for (int i = 0; i < under16Count; i++) {
       System.out.println(people[under16Index[i]].getName());
     }
+  }
+
+  private static double averageHeight(Person[] people) {
+    int n = people.length;
+    double heightSum = 0.0;
+    for (Person person : people) {
+      heightSum += person.getHeight();
+    }
+    return heightSum / people.length;
   }
 }

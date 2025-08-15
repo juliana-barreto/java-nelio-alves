@@ -9,8 +9,8 @@ public class Person {
   private Character gender;
 
   public Person(String name, Integer age, Double height, Character gender) {
-    if (name.trim().isEmpty()) {
-      throw new IllegalArgumentException("Name cannot be empty.");
+    if (name == null || name.trim().isEmpty()) {
+      throw new IllegalArgumentException("Name cannot be null or empty.");
     }
     if (age != null && age < 0) {
       throw new IllegalArgumentException("Age cannot be negative.");

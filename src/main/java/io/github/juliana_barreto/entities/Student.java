@@ -2,6 +2,7 @@ package io.github.juliana_barreto.entities;
 
 public class Student {
 
+  private final String name;
   private final double[] scores;
 
   public Student(String name, double[] scores) {
@@ -31,7 +32,6 @@ public class Student {
     return name;
   }
 
-  private final String name;
 
   public double[] getScores() {
     return scores;

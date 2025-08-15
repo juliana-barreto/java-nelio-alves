@@ -16,24 +16,23 @@ public class Student {
     this.scores = scores;
   }
 
-  public double finalGrade() {
-    double sum = 0;
-    for (double score : scores) {
-      sum += score;
-    }
-    return sum;
+  public String getName() {
+    return name;
+  }
+
+  public double[] getScores() {
+    return scores;
   }
 
   public double average() {
     return finalGrade() / scores.length;
   }
 
-  public String getName() {
-    return name;
-  }
-
-
-  public double[] getScores() {
-    return scores;
+  public double finalGrade() {
+    double sum = 0;
+    for (double score : scores) {
+      sum += score;
+    }
+    return sum;
   }
 }

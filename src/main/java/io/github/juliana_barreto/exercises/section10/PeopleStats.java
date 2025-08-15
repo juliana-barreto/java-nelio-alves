@@ -23,7 +23,7 @@ public class PeopleStats {
       int age = scanner.nextInt();
       System.out.print("Height: ");
       double height = scanner.nextDouble();
-      people[i] = new Person(name, age, height);
+      people[i] = new Person.Builder(name).age(age).height(height).build();
     }
     scanner.close();
 

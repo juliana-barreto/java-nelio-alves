@@ -11,6 +11,7 @@ public class HeightAndGenderStats {
 
     System.out.print("Enter the number of people: ");
     int n = scanner.nextInt();
+    System.out.println();
     Person[] people = new Person[n];
 
     for (int i = 0; i < n; i++) {
@@ -22,7 +23,8 @@ public class HeightAndGenderStats {
       double height = scanner.nextDouble();
       System.out.print("Gender (F/M): ");
       char gender = scanner.next().toUpperCase().charAt(0);
-      people[i] = new Person(name, height, gender);
+      System.out.println();
+        people[i] = new Person.Builder(name).height(height).gender(gender).build();
     }
     scanner.close();
 

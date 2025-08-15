@@ -18,7 +18,7 @@ public class SalaryIncrease {
     double tax = scanner.nextDouble();
     scanner.close();
 
-    Employee employee = new Employee(name, grossSalary, tax);
+    Employee employee = new Employee.Builder(name, grossSalary).tax(tax).build();
     System.out.println(employee);
 
     System.out.print("Which percentage to increase salary? ");

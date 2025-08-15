@@ -15,11 +15,14 @@ public class HeightAndGenderStats {
 
     for (int i = 0; i < n; i++) {
       System.out.printf("Person #%d%n", i + 1);
+      scanner.nextLine();
+      System.out.print("Name: ");
+      String name = scanner.nextLine();
       System.out.print("Height (in meters): ");
       double height = scanner.nextDouble();
       System.out.print("Gender (F/M): ");
       char gender = scanner.next().toUpperCase().charAt(0);
-      people[i] = new Person(height, gender);
+      people[i] = new Person(name, height, gender);
     }
     scanner.close();
 
